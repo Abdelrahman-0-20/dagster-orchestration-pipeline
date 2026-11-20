@@ -52,7 +52,12 @@ Dagster installs with pip and `dagster dev` serves the UI locally.
 
 | Milestone | Scope | Gate |
 |---|---|---|
-| **M1** | skeleton + config + World Bank client (pagination, retry, fixture-injectable) + raw landing (ingest log, idempotent) + silver transform; **≥12 tests** | `./verify.sh` exit 0, one commit |
+| **M1a** | skeleton + config + World Bank client (pagination, retry, fixture-injectable — `tests/fixtures/` already recorded) + raw landing (ingest log, idempotent); **≥6 tests** | `./verify.sh` exit 0, one commit |
+| **M1b** | silver transform + named-error data contract at raw→silver; **≥12 tests total** | `./verify.sh` exit 0, one commit |
+
+> *Amendment (post-M0): M1 split into M1a/M1b so each relay cycle fits the
+> orchestrator's 10-minute window (planner runs on pro/high and consumes ~half
+> of it). Same scope, two gates.*
 | **M2** | gold marts + contract/quality tests + full Dagster graph (assets, daily schedule, sensor, RetryPolicy, partitioned asset); **≥25 tests total** | `./verify.sh` exit 0, one commit |
 | **M3** | CI workflow + README (architecture, decisions, resume line) + polish | `./verify.sh` exit 0, one commit; **no push without human instruction** |
 
