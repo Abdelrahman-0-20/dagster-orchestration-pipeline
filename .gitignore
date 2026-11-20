@@ -1,0 +1,8 @@
+.venv/
+warehouse/
+data/raw/
+__pycache__/
+*.pyc
+.pytest_cache/
+.dagster/
+mimo-escalator-state.json

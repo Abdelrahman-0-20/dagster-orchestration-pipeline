@@ -1,0 +1,40 @@
+# M1a — configuration. Thresholds are data, never code (charter req 1).
+sources:
+  world_bank:
+    base_url: "https://api.worldbank.org/v2"
+    format: json
+    per_page: 100
+    # No API key — World Bank v2 is open.
+    indicators:
+      - id: NY.GDP.MKTP.CD
+        name: gdp_current_usd
+      - id: SP.POP.TOTL
+        name: population_total
+    retry:
+      max_retries: 3
+      backoff_seconds: 0.5
+  iso3166:
+    # SHA-pinned static CSV: ISO 3166 country -> region (raw.githubusercontent.com).
+    url: "https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv"
+    sha256: "347bba35029f804f53780062052499781d267b8a5d887bf3b051e80a68390d6d"
+
+# Data contract: required fields per source, enforced at the raw -> silver
+# boundary (charter req 5). Violations fail loud with named errors.
+contracts:
+  world_bank:
+    required_fields:
+      - indicator
+      - country
+      - countryiso3code
+      - date
+      - value
+  iso3166:
+    required_fields:
+      - name
+      - alpha-3
+      - region
+
+paths:
+  warehouse: "warehouse/pipeline.duckdb"
+  raw_dir: "data/raw"
+  fixtures: "tests/fixtures"
