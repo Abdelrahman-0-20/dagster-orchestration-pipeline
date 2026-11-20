@@ -1,0 +1,520 @@
+country_iso3,indicator_id,latest_year,latest_value,country_name,region,sub_region
+WLD,NY.GDP.MKTP.CD,2025,118350166039396.0,World,,
+OED,NY.GDP.MKTP.CD,2025,72543267888365.3,OECD members,,
+PST,NY.GDP.MKTP.CD,2025,67379697065259.8,Post-demographic dividend,,
+IBT,NY.GDP.MKTP.CD,2025,46251403468584.0,IDA & IBRD total,,
+IBD,NY.GDP.MKTP.CD,2025,43056359078690.0,IBRD only,,
+LMY,NY.GDP.MKTP.CD,2025,41478597585191.8,Low & middle income,,
+MIC,NY.GDP.MKTP.CD,2025,40836798203180.8,Middle income,,
+EAS,NY.GDP.MKTP.CD,2025,33656980597208.3,East Asia & Pacific,,
+NAC,NY.GDP.MKTP.CD,2025,33099237425506.2,North America,,
+ECS,NY.GDP.MKTP.CD,2025,32268612230366.9,Europe & Central Asia,,
+LTE,NY.GDP.MKTP.CD,2025,31873985161936.8,Late-demographic dividend,,
+USA,NY.GDP.MKTP.CD,2025,30769700000000.0,United States,Americas,Northern America
+EAP,NY.GDP.MKTP.CD,2025,23247334500847.4,East Asia & Pacific (excluding high income),,
+TEA,NY.GDP.MKTP.CD,2025,23218679986475.4,East Asia & Pacific (IDA & IBRD countries),,
+EUU,NY.GDP.MKTP.CD,2025,21243212570163.3,European Union,,
+CHN,NY.GDP.MKTP.CD,2025,19498039388042.6,China,Asia,Eastern Asia
+EMU,NY.GDP.MKTP.CD,2025,18010000307247.0,Euro area,,
+EAR,NY.GDP.MKTP.CD,2025,16406032169247.4,Early-demographic dividend,,
+LCN,NY.GDP.MKTP.CD,2025,7395989651242.09,Latin America & Caribbean,,
+TEC,NY.GDP.MKTP.CD,2025,7077191807196.39,Europe & Central Asia (IDA & IBRD countries),,
+TLA,NY.GDP.MKTP.CD,2025,7050566084338.85,Latin America & the Caribbean (IDA & IBRD countries),,
+LAC,NY.GDP.MKTP.CD,2025,6523496128943.99,Latin America & Caribbean (excluding high income),,
+MEA,NY.GDP.MKTP.CD,2025,5135569539885.64,"Middle East, North Africa, Afghanistan & Pakistan",,
+DEU,NY.GDP.MKTP.CD,2025,5050922925047.05,Germany,Europe,Western Europe
+SAS,NY.GDP.MKTP.CD,2025,4578021773987.28,South Asia,,
+TSA,NY.GDP.MKTP.CD,2025,4578021773987.28,South Asia (IDA & IBRD),,
+JPN,NY.GDP.MKTP.CD,2025,4435162999976.94,Japan,Asia,Eastern Asia
+GBR,NY.GDP.MKTP.CD,2025,4002587541846.01,United Kingdom,Europe,Northern Europe
+IND,NY.GDP.MKTP.CD,2025,3956067115771.63,India,Asia,Southern Asia
+ARB,NY.GDP.MKTP.CD,2025,3797527236194.65,Arab World,,
+FRA,NY.GDP.MKTP.CD,2025,3366315927447.33,France,Europe,Western Europe
+IDA,NY.GDP.MKTP.CD,2025,3195044389894.02,IDA total,,
+ECA,NY.GDP.MKTP.CD,2025,2815874458069.5,Europe & Central Asia (excluding high income),,
+CEB,NY.GDP.MKTP.CD,2025,2762562481345.2,Central Europe and the Baltics,,
+RUS,NY.GDP.MKTP.CD,2025,2561310169358.74,Russian Federation,Europe,Eastern Europe
+ITA,NY.GDP.MKTP.CD,2025,2551556954100.35,Italy,Europe,Southern Europe
+CAN,NY.GDP.MKTP.CD,2025,2319899772425.92,Canada,Americas,Northern America
+BRA,NY.GDP.MKTP.CD,2025,2279920092492.13,Brazil,Americas,Latin America and the Caribbean
+SSF,NY.GDP.MKTP.CD,2025,2211221046102.8,Sub-Saharan Africa,,
+TSS,NY.GDP.MKTP.CD,2025,2211221046102.8,Sub-Saharan Africa (IDA & IBRD countries),,
+SSA,NY.GDP.MKTP.CD,2025,2208834023249.31,Sub-Saharan Africa (excluding high income),,
+MNA,NY.GDP.MKTP.CD,2025,2132889870483.32,"Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",,
+TMN,NY.GDP.MKTP.CD,2025,2115722770483.32,"Middle East, North Africa, Afghanistan & Pakistan (IDA & IBRD)",,
+IDX,NY.GDP.MKTP.CD,2025,1925012147619.92,IDA only,,
+ESP,NY.GDP.MKTP.CD,2025,1906453309985.88,Spain,Europe,Southern Europe
+FCV,NY.GDP.MKTP.CD,2025,1878671727974.76,"Fragility, Conflict, and Violence (FCV) situations",,
+KOR,NY.GDP.MKTP.CD,2025,1872374961553.15,"Korea, Rep.",Asia,Eastern Asia
+MEX,NY.GDP.MKTP.CD,2025,1832641364775.52,Mexico,Americas,Latin America and the Caribbean
+AUS,NY.GDP.MKTP.CD,2025,1798518933689.21,Australia,Oceania,Australia and New Zealand
+PRE,NY.GDP.MKTP.CD,2025,1665770125125.74,Pre-demographic dividend,,
+LDC,NY.GDP.MKTP.CD,2025,1653686211542.1,Least developed countries: UN classification,,
+TUR,NY.GDP.MKTP.CD,2025,1597293229287.0,Turkiye,Asia,Western Asia
+IDN,NY.GDP.MKTP.CD,2025,1445642584163.81,Indonesia,Asia,South-eastern Asia
+AFE,NY.GDP.MKTP.CD,2025,1358694050872.54,Africa Eastern and Southern,,
+NLD,NY.GDP.MKTP.CD,2025,1332767651100.39,Netherlands,Europe,Western Europe
+HPC,NY.GDP.MKTP.CD,2025,1285481386975.21,Heavily indebted poor countries (HIPC),,
+SAU,NY.GDP.MKTP.CD,2025,1276942933333.33,Saudi Arabia,Asia,Western Asia
+IDB,NY.GDP.MKTP.CD,2025,1270032242274.1,IDA blend,,
+CHE,NY.GDP.MKTP.CD,2025,1043529899250.92,Switzerland,Europe,Western Europe
+POL,NY.GDP.MKTP.CD,2025,1035491784197.44,Poland,Europe,Eastern Europe
+AFW,NY.GDP.MKTP.CD,2025,852526995230.254,Africa Western and Central,,
+BEL,NY.GDP.MKTP.CD,2025,725466462859.646,Belgium,Europe,Western Europe
+IRL,NY.GDP.MKTP.CD,2025,721701359046.313,Ireland,Europe,Northern Europe
+ARG,NY.GDP.MKTP.CD,2025,683097891618.597,Argentina,Americas,Latin America and the Caribbean
+SWE,NY.GDP.MKTP.CD,2025,668998664082.081,Sweden,Europe,Northern Europe
+ISR,NY.GDP.MKTP.CD,2025,610777842873.595,Israel,Asia,Western Asia
+SGP,NY.GDP.MKTP.CD,2025,603869516998.738,Singapore,Asia,South-eastern Asia
+AUT,NY.GDP.MKTP.CD,2025,579470021095.418,Austria,Europe,Western Europe
+THA,NY.GDP.MKTP.CD,2025,577009981112.015,Thailand,Asia,South-eastern Asia
+ARE,NY.GDP.MKTP.CD,2024,552324919095.872,United Arab Emirates,Asia,Western Asia
+NOR,NY.GDP.MKTP.CD,2025,530755719438.879,Norway,Europe,Northern Europe
+VNM,NY.GDP.MKTP.CD,2025,514697215165.065,Viet Nam,Asia,South-eastern Asia
+PHL,NY.GDP.MKTP.CD,2025,487086123720.417,Philippines,Asia,South-eastern Asia
+MYS,NY.GDP.MKTP.CD,2025,472193128644.597,Malaysia,Asia,South-eastern Asia
+DNK,NY.GDP.MKTP.CD,2025,462526660468.393,Denmark,Europe,Northern Europe
+COL,NY.GDP.MKTP.CD,2025,457410034202.523,Colombia,Americas,Latin America and the Caribbean
+BGD,NY.GDP.MKTP.CD,2025,456319229255.578,Bangladesh,Asia,Southern Asia
+ROU,NY.GDP.MKTP.CD,2025,428677977854.826,Romania,Europe,Eastern Europe
+HKG,NY.GDP.MKTP.CD,2025,427310315921.993,"Hong Kong SAR, China",Asia,Eastern Asia
+ZAF,NY.GDP.MKTP.CD,2025,427184325997.307,South Africa,Africa,Sub-Saharan Africa
+PAK,NY.GDP.MKTP.CD,2025,407307214476.222,Pakistan,Asia,Southern Asia
+CZE,NY.GDP.MKTP.CD,2025,391026962800.475,Czechia,Europe,Eastern Europe
+EGY,NY.GDP.MKTP.CD,2025,365254630179.737,"Egypt, Arab Rep.",Africa,Northern Africa
+IRN,NY.GDP.MKTP.CD,2025,362682115433.364,"Iran, Islamic Rep.",Asia,Southern Asia
+CHL,NY.GDP.MKTP.CD,2025,357371159574.862,Chile,Americas,Latin America and the Caribbean
+PRT,NY.GDP.MKTP.CD,2025,346639825141.821,Portugal,Europe,Southern Europe
+SST,NY.GDP.MKTP.CD,2025,337311651764.51,Small states,,
+PER,NY.GDP.MKTP.CD,2025,334854659181.893,Peru,Americas,Latin America and the Caribbean
+FIN,NY.GDP.MKTP.CD,2025,317039368819.607,Finland,Europe,Northern Europe
+KAZ,NY.GDP.MKTP.CD,2025,306239209650.024,Kazakhstan,Asia,Central Asia
+NGA,NY.GDP.MKTP.CD,2025,290794361542.112,Nigeria,Africa,Sub-Saharan Africa
+DZA,NY.GDP.MKTP.CD,2025,287031225987.736,Algeria,Africa,Northern Africa
+GRC,NY.GDP.MKTP.CD,2025,280635521324.441,Greece,Europe,Southern Europe
+NZL,NY.GDP.MKTP.CD,2025,264057413739.965,New Zealand,Oceania,Australia and New Zealand
+IRQ,NY.GDP.MKTP.CD,2025,254367293538.462,Iraq,Asia,Western Asia
+HUN,NY.GDP.MKTP.CD,2025,246490213513.054,Hungary,Europe,Eastern Europe
+OSS,NY.GDP.MKTP.CD,2025,228636677706.691,Other small states,,
+QAT,NY.GDP.MKTP.CD,2025,215559615384.615,Qatar,Asia,Western Asia
+UKR,NY.GDP.MKTP.CD,2025,214233312784.397,Ukraine,Europe,Eastern Europe
+MAR,NY.GDP.MKTP.CD,2025,182374250612.28,Morocco,Africa,Northern Africa
+KWT,NY.GDP.MKTP.CD,2025,157209026926.418,Kuwait,Asia,Western Asia
+SVK,NY.GDP.MKTP.CD,2025,154530066506.895,Slovak Republic,Europe,Eastern Europe
+UZB,NY.GDP.MKTP.CD,2025,147038081129.405,Uzbekistan,Asia,Central Asia
+KEN,NY.GDP.MKTP.CD,2025,135941278878.815,Kenya,Africa,Sub-Saharan Africa
+BGR,NY.GDP.MKTP.CD,2025,130777235529.606,Bulgaria,Europe,Eastern Europe
+ECU,NY.GDP.MKTP.CD,2025,130320560400.0,Ecuador,Americas,Latin America and the Caribbean
+PRI,NY.GDP.MKTP.CD,2025,129368484000.0,Puerto Rico (US),Americas,Latin America and the Caribbean
+DOM,NY.GDP.MKTP.CD,2025,127407463759.043,Dominican Republic,Americas,Latin America and the Caribbean
+ETH,NY.GDP.MKTP.CD,2025,126358758448.356,Ethiopia,Africa,Sub-Saharan Africa
+GTM,NY.GDP.MKTP.CD,2025,123306008821.471,Guatemala,Americas,Latin America and the Caribbean
+AGO,NY.GDP.MKTP.CD,2025,122174889423.635,Angola,Africa,Sub-Saharan Africa
+GHA,NY.GDP.MKTP.CD,2025,114209905278.717,Ghana,Africa,Sub-Saharan Africa
+OMN,NY.GDP.MKTP.CD,2025,109604780696.23,Oman,Asia,Western Asia
+LKA,NY.GDP.MKTP.CD,2025,108825231671.196,Sri Lanka,Asia,Southern Asia
+CUB,NY.GDP.MKTP.CD,2020,107352000000.0,Cuba,Americas,Latin America and the Caribbean
+HRV,NY.GDP.MKTP.CD,2025,105060182186.274,Croatia,Europe,Southern Europe
+CRI,NY.GDP.MKTP.CD,2025,102904921157.478,Costa Rica,Americas,Latin America and the Caribbean
+LUX,NY.GDP.MKTP.CD,2025,101157829491.107,Luxembourg,Europe,Western Europe
+SRB,NY.GDP.MKTP.CD,2025,99953324472.9042,Serbia,Europe,Southern Europe
+CIV,NY.GDP.MKTP.CD,2025,99773555666.1988,Cote d'Ivoire,Africa,Sub-Saharan Africa
+VEN,NY.GDP.MKTP.CD,2025,99661244155.6306,"Venezuela, RB",Americas,Latin America and the Caribbean
+LTU,NY.GDP.MKTP.CD,2025,95210150818.3512,Lithuania,Europe,Northern Europe
+CSS,NY.GDP.MKTP.CD,2025,95141207521.3621,Caribbean small states,,
+BLR,NY.GDP.MKTP.CD,2025,93397215864.198,Belarus,Europe,Eastern Europe
+COD,NY.GDP.MKTP.CD,2025,91030531316.9936,"Congo, Dem. Rep.",Africa,Sub-Saharan Africa
+PAN,NY.GDP.MKTP.CD,2025,90462600000.0,Panama,Americas,Latin America and the Caribbean
+TZA,NY.GDP.MKTP.CD,2025,90143496090.4411,Tanzania,Africa,Sub-Saharan Africa
+URY,NY.GDP.MKTP.CD,2025,85347696277.6859,Uruguay,Americas,Latin America and the Caribbean
+MMR,NY.GDP.MKTP.CD,2025,81665773809.5238,Myanmar,Asia,South-eastern Asia
+SVN,NY.GDP.MKTP.CD,2025,79648204979.3618,Slovenia,Europe,Southern Europe
+AZE,NY.GDP.MKTP.CD,2025,75937647058.8235,Azerbaijan,Asia,Western Asia
+BOL,NY.GDP.MKTP.CD,2025,64768947525.3256,Bolivia,Americas,Latin America and the Caribbean
+UGA,NY.GDP.MKTP.CD,2025,61985829288.1496,Uganda,Africa,Sub-Saharan Africa
+JOR,NY.GDP.MKTP.CD,2025,61610052535.2113,Jordan,Asia,Western Asia
+SDN,NY.GDP.MKTP.CD,2025,60162634574.4689,Sudan,Africa,Northern Africa
+CMR,NY.GDP.MKTP.CD,2025,58933453923.761,Cameroon,Africa,Sub-Saharan Africa
+TUN,NY.GDP.MKTP.CD,2025,57502836548.0878,Tunisia,Africa,Northern Africa
+MAC,NY.GDP.MKTP.CD,2025,52061007670.169,"Macao SAR, China",Asia,Eastern Asia
+KHM,NY.GDP.MKTP.CD,2025,51267065842.9641,Cambodia,Asia,South-eastern Asia
+ZWE,NY.GDP.MKTP.CD,2025,51215643905.5886,Zimbabwe,Africa,Sub-Saharan Africa
+TKM,NY.GDP.MKTP.CD,2025,49828621355.6516,Turkmenistan,Asia,Central Asia
+PRY,NY.GDP.MKTP.CD,2025,49278227554.3339,Paraguay,Americas,Latin America and the Caribbean
+BHR,NY.GDP.MKTP.CD,2025,48965725531.9149,Bahrain,Asia,Western Asia
+LVA,NY.GDP.MKTP.CD,2025,48618869160.3254,Latvia,Europe,Northern Europe
+LBY,NY.GDP.MKTP.CD,2025,48098909613.6316,Libya,Africa,Northern Africa
+EST,NY.GDP.MKTP.CD,2025,47030833798.5866,Estonia,Europe,Northern Europe
+NPL,NY.GDP.MKTP.CD,2025,45489810283.1132,Nepal,Asia,Southern Asia
+CYP,NY.GDP.MKTP.CD,2025,41225787247.3309,Cyprus,Asia,Western Asia
+HND,NY.GDP.MKTP.CD,2025,39601409103.3005,Honduras,Americas,Latin America and the Caribbean
+ISL,NY.GDP.MKTP.CD,2025,38582528789.0033,Iceland,Europe,Northern Europe
+GEO,NY.GDP.MKTP.CD,2025,38143612855.1367,Georgia,Asia,Western Asia
+SEN,NY.GDP.MKTP.CD,2025,37006536238.3731,Senegal,Africa,Sub-Saharan Africa
+SLV,NY.GDP.MKTP.CD,2025,36708110000.0,El Salvador,Americas,Latin America and the Caribbean
+BIH,NY.GDP.MKTP.CD,2025,32599982936.3931,Bosnia and Herzegovina,Europe,Southern Europe
+PNG,NY.GDP.MKTP.CD,2025,32498658653.8415,Papua New Guinea,Oceania,Melanesia
+HTI,NY.GDP.MKTP.CD,2025,32077278409.2339,Haiti,Americas,Latin America and the Caribbean
+ALB,NY.GDP.MKTP.CD,2025,30540188271.3421,Albania,Europe,Southern Europe
+MLI,NY.GDP.MKTP.CD,2025,30069148580.7688,Mali,Africa,Sub-Saharan Africa
+ARM,NY.GDP.MKTP.CD,2025,29243452882.3545,Armenia,Asia,Western Asia
+ZMB,NY.GDP.MKTP.CD,2025,28879806220.1264,Zambia,Africa,Sub-Saharan Africa
+GIN,NY.GDP.MKTP.CD,2025,28346024753.2924,Guinea,Africa,Sub-Saharan Africa
+MLT,NY.GDP.MKTP.CD,2025,27771821560.9411,Malta,Europe,Southern Europe
+BFA,NY.GDP.MKTP.CD,2025,27627297461.3181,Burkina Faso,Africa,Sub-Saharan Africa
+GUY,NY.GDP.MKTP.CD,2025,27097477218.2254,Guyana,Americas,Latin America and the Caribbean
+LBN,NY.GDP.MKTP.CD,2024,25971643441.3408,Lebanon,Asia,Western Asia
+TTO,NY.GDP.MKTP.CD,2025,25942749718.4685,Trinidad and Tobago,Americas,Latin America and the Caribbean
+MNG,NY.GDP.MKTP.CD,2025,25369107325.4549,Mongolia,Asia,Eastern Asia
+BEN,NY.GDP.MKTP.CD,2025,24566420903.5337,Benin,Africa,Sub-Saharan Africa
+SYR,NY.GDP.MKTP.CD,2022,23737634644.3994,Syrian Arab Republic,Asia,Western Asia
+JAM,NY.GDP.MKTP.CD,2025,22704903217.5631,Jamaica,Americas,Latin America and the Caribbean
+KGZ,NY.GDP.MKTP.CD,2025,22623752095.4613,Kyrgyz Republic,Asia,Central Asia
+MOZ,NY.GDP.MKTP.CD,2025,22337997046.1913,Mozambique,Africa,Sub-Saharan Africa
+NIC,NY.GDP.MKTP.CD,2025,22237167113.0916,Nicaragua,Americas,Latin America and the Caribbean
+NER,NY.GDP.MKTP.CD,2025,21646191388.2507,Niger,Africa,Sub-Saharan Africa
+YEM,NY.GDP.MKTP.CD,2018,21606160663.0318,"Yemen, Rep.",Asia,Western Asia
+TCD,NY.GDP.MKTP.CD,2025,21472835225.4338,Chad,Africa,Sub-Saharan Africa
+GAB,NY.GDP.MKTP.CD,2025,21427119323.2764,Gabon,Africa,Sub-Saharan Africa
+MDA,NY.GDP.MKTP.CD,2025,20351796275.2943,Moldova,Europe,Eastern Europe
+BWA,NY.GDP.MKTP.CD,2025,19928479839.4476,Botswana,Africa,Sub-Saharan Africa
+MDG,NY.GDP.MKTP.CD,2025,19620352035.7899,Madagascar,Africa,Sub-Saharan Africa
+MKD,NY.GDP.MKTP.CD,2025,19101199817.0174,North Macedonia,Europe,Southern Europe
+LAO,NY.GDP.MKTP.CD,2025,18302970218.5902,Lao PDR,Asia,South-eastern Asia
+AFG,NY.GDP.MKTP.CD,2024,17778508875.7396,Afghanistan,Asia,Southern Asia
+TJK,NY.GDP.MKTP.CD,2025,17660626562.4832,Tajikistan,Asia,Central Asia
+PSE,NY.GDP.MKTP.CD,2025,17167100000.0,West Bank and Gaza,Asia,Western Asia
+RWA,NY.GDP.MKTP.CD,2025,16372132990.2271,Rwanda,Africa,Sub-Saharan Africa
+COG,NY.GDP.MKTP.CD,2025,16306633778.765,"Congo, Rep.",Africa,Sub-Saharan Africa
+MUS,NY.GDP.MKTP.CD,2025,16157804491.7614,Mauritius,Africa,Sub-Saharan Africa
+BHS,NY.GDP.MKTP.CD,2024,15832800000.0,"Bahamas, The",Americas,Latin America and the Caribbean
+NAM,NY.GDP.MKTP.CD,2025,15080340653.5276,Namibia,Africa,Sub-Saharan Africa
+BRN,NY.GDP.MKTP.CD,2025,15031980994.1121,Brunei Darussalam,Asia,South-eastern Asia
+MWI,NY.GDP.MKTP.CD,2025,14918276698.303,Malawi,Africa,Sub-Saharan Africa
+PSS,NY.GDP.MKTP.CD,2025,13005809518.6945,Pacific island small states,,
+SOM,NY.GDP.MKTP.CD,2025,12995200000.2658,"Somalia, Fed. Rep.",Africa,Sub-Saharan Africa
+GNQ,NY.GDP.MKTP.CD,2025,12823210425.9217,Equatorial Guinea,Africa,Sub-Saharan Africa
+CHI,NY.GDP.MKTP.CD,2023,12507320838.3932,Channel Islands,,
+XKX,NY.GDP.MKTP.CD,2025,12456403306.8191,Kosovo,,
+SSD,NY.GDP.MKTP.CD,2015,11997800760.2242,South Sudan,Africa,Sub-Saharan Africa
+TGO,NY.GDP.MKTP.CD,2025,11889949067.4697,Togo,Africa,Sub-Saharan Africa
+MRT,NY.GDP.MKTP.CD,2025,11679910946.4371,Mauritania,Africa,Sub-Saharan Africa
+MCO,NY.GDP.MKTP.CD,2024,11125788838.2812,Monaco,Europe,Western Europe
+MNE,NY.GDP.MKTP.CD,2025,9232801464.79257,Montenegro,Europe,Southern Europe
+BMU,NY.GDP.MKTP.CD,2024,9194499000.0,Bermuda,Americas,Northern America
+LIE,NY.GDP.MKTP.CD,2024,8905764270.4054,Liechtenstein,Europe,Western Europe
+NCL,NY.GDP.MKTP.CD,2024,8548919387.12607,New Caledonia,Oceania,Melanesia
+BRB,NY.GDP.MKTP.CD,2025,8016550000.0,Barbados,Americas,Latin America and the Caribbean
+CYM,NY.GDP.MKTP.CD,2024,7765336505.34319,Cayman Islands,Americas,Latin America and the Caribbean
+MDV,NY.GDP.MKTP.CD,2025,7741066860.6337,Maldives,Asia,Southern Asia
+IMN,NY.GDP.MKTP.CD,2023,7576129932.79381,Isle of Man,Europe,Northern Europe
+SLE,NY.GDP.MKTP.CD,2025,7464157904.43509,Sierra Leone,Africa,Sub-Saharan Africa
+GUM,NY.GDP.MKTP.CD,2022,6910000000.0,Guam,Oceania,Micronesia
+PYF,NY.GDP.MKTP.CD,2024,6323716355.05009,French Polynesia,Oceania,Polynesia
+FJI,NY.GDP.MKTP.CD,2025,6198013062.06553,Fiji,Oceania,Melanesia
+LBR,NY.GDP.MKTP.CD,2025,5245938900.0,Liberia,Africa,Sub-Saharan Africa
+SWZ,NY.GDP.MKTP.CD,2025,5160679612.81734,Eswatini,Africa,Sub-Saharan Africa
+VIR,NY.GDP.MKTP.CD,2022,4672000000.0,Virgin Islands (U.S.),Americas,Latin America and the Caribbean
+DJI,NY.GDP.MKTP.CD,2025,4624533092.31886,Djibouti,Africa,Sub-Saharan Africa
+SUR,NY.GDP.MKTP.CD,2025,4523657796.86421,Suriname,Americas,Latin America and the Caribbean
+AND,NY.GDP.MKTP.CD,2025,4500982731.80784,Andorra,Europe,Southern Europe
+ABW,NY.GDP.MKTP.CD,2024,4167588070.29217,Aruba,Americas,Latin America and the Caribbean
+FRO,NY.GDP.MKTP.CD,2024,4052937169.76536,Faroe Islands,Europe,Northern Europe
+BTN,NY.GDP.MKTP.CD,2025,3579320145.13077,Bhutan,Asia,Southern Asia
+CUW,NY.GDP.MKTP.CD,2024,3561178212.2905,Curacao,Americas,Latin America and the Caribbean
+BDI,NY.GDP.MKTP.CD,2025,3364713864.08488,Burundi,Africa,Sub-Saharan Africa
+GRL,NY.GDP.MKTP.CD,2023,3326543974.39193,Greenland,Americas,Northern America
+BLZ,NY.GDP.MKTP.CD,2025,3326500000.0,Belize,Americas,Latin America and the Caribbean
+CAF,NY.GDP.MKTP.CD,2025,3066109226.40165,Central African Republic,Africa,Sub-Saharan Africa
+CPV,NY.GDP.MKTP.CD,2025,3056630435.32463,Cabo Verde,Africa,Sub-Saharan Africa
+LCA,NY.GDP.MKTP.CD,2025,2656444444.44444,St. Lucia,Americas,Latin America and the Caribbean
+GMB,NY.GDP.MKTP.CD,2025,2593673987.53306,"Gambia, The",Africa,Sub-Saharan Africa
+LSO,NY.GDP.MKTP.CD,2025,2573572920.05159,Lesotho,Africa,Sub-Saharan Africa
+GNB,NY.GDP.MKTP.CD,2025,2527930272.92988,Guinea-Bissau,Africa,Sub-Saharan Africa
+SYC,NY.GDP.MKTP.CD,2025,2387022853.48583,Seychelles,Africa,Sub-Saharan Africa
+ATG,NY.GDP.MKTP.CD,2025,2338196296.2963,Antigua and Barbuda,Americas,Latin America and the Caribbean
+ERI,NY.GDP.MKTP.CD,2011,2065001626.01626,Eritrea,Africa,Sub-Saharan Africa
+SMR,NY.GDP.MKTP.CD,2023,2027243193.5116,San Marino,Europe,Southern Europe
+TLS,NY.GDP.MKTP.CD,2025,1902180257.82737,Timor-Leste,Asia,South-eastern Asia
+SXM,NY.GDP.MKTP.CD,2025,1887728480.44693,Sint Maarten (Dutch part),Americas,Latin America and the Caribbean
+COM,NY.GDP.MKTP.CD,2025,1814920856.27026,Comoros,Africa,Sub-Saharan Africa
+SLB,NY.GDP.MKTP.CD,2025,1749572442.95016,Solomon Islands,Oceania,Melanesia
+TCA,NY.GDP.MKTP.CD,2024,1745378000.0,Turks and Caicos Islands,Americas,Latin America and the Caribbean
+GRD,NY.GDP.MKTP.CD,2025,1420173228.56948,Grenada,Americas,Latin America and the Caribbean
+VUT,NY.GDP.MKTP.CD,2025,1353658840.63993,Vanuatu,Oceania,Melanesia
+WSM,NY.GDP.MKTP.CD,2025,1287936621.64619,Samoa,Oceania,Polynesia
+VCT,NY.GDP.MKTP.CD,2025,1255222222.22222,St. Vincent and the Grenadines,Americas,Latin America and the Caribbean
+KNA,NY.GDP.MKTP.CD,2025,1183514814.81481,St. Kitts and Nevis,Americas,Latin America and the Caribbean
+MNP,NY.GDP.MKTP.CD,2022,1096000000.0,Northern Mariana Islands,Oceania,Micronesia
+STP,NY.GDP.MKTP.CD,2025,981293586.906408,Sao Tome and Principe,Africa,Sub-Saharan Africa
+ASM,NY.GDP.MKTP.CD,2022,871000000.0,American Samoa,Oceania,Polynesia
+DMA,NY.GDP.MKTP.CD,2025,723859259.259259,Dominica,Americas,Latin America and the Caribbean
+TON,NY.GDP.MKTP.CD,2025,679218218.578017,Tonga,Oceania,Polynesia
+MAF,NY.GDP.MKTP.CD,2021,649206262.847519,St. Martin (French part),Americas,Latin America and the Caribbean
+FSM,NY.GDP.MKTP.CD,2025,501797600.0,"Micronesia, Fed. Sts.",Oceania,Micronesia
+KIR,NY.GDP.MKTP.CD,2025,349227254.158833,Kiribati,Oceania,Micronesia
+PLW,NY.GDP.MKTP.CD,2025,345000000.0,Palau,Oceania,Micronesia
+MHL,NY.GDP.MKTP.CD,2025,308000000.0,Marshall Islands,Oceania,Micronesia
+NRU,NY.GDP.MKTP.CD,2025,176040043.932346,Naoero,Oceania,Micronesia
+TUV,NY.GDP.MKTP.CD,2025,57345434.7234984,Tuvalu,Oceania,Polynesia
+WLD,SP.POP.TOTL,2025,8215424893.0,World,,
+IBT,SP.POP.TOTL,2025,6993790788.0,IDA & IBRD total,,
+LMY,SP.POP.TOTL,2025,6791684991.0,Low & middle income,,
+MIC,SP.POP.TOTL,2025,6024194822.0,Middle income,,
+IBD,SP.POP.TOTL,2025,5006926951.0,IBRD only,,
+EAR,SP.POP.TOTL,2025,3592750579.0,Early-demographic dividend,,
+EAS,SP.POP.TOTL,2025,2390873921.0,East Asia & Pacific,,
+LTE,SP.POP.TOTL,2025,2330425681.0,Late-demographic dividend,,
+EAP,SP.POP.TOTL,2025,2143908411.0,East Asia & Pacific (excluding high income),,
+TEA,SP.POP.TOTL,2025,2117367063.0,East Asia & Pacific (IDA & IBRD countries),,
+IDA,SP.POP.TOTL,2025,1986863837.0,IDA total,,
+SAS,SP.POP.TOTL,2025,1692252900.0,South Asia,,
+TSA,SP.POP.TOTL,2025,1692252900.0,South Asia (IDA & IBRD),,
+IND,SP.POP.TOTL,2025,1463865525.0,India,Asia,Southern Asia
+CHN,SP.POP.TOTL,2025,1406585000.0,China,Asia,Eastern Asia
+OED,SP.POP.TOTL,2025,1402243571.0,OECD members,,
+SSF,SP.POP.TOTL,2025,1321654217.0,Sub-Saharan Africa,,
+TSS,SP.POP.TOTL,2025,1321654217.0,Sub-Saharan Africa (IDA & IBRD countries),,
+SSA,SP.POP.TOTL,2025,1321531487.0,Sub-Saharan Africa (excluding high income),,
+IDX,SP.POP.TOTL,2025,1297080455.0,IDA only,,
+LDC,SP.POP.TOTL,2025,1214167506.0,Least developed countries: UN classification,,
+PRE,SP.POP.TOTL,2025,1133132223.0,Pre-demographic dividend,,
+PST,SP.POP.TOTL,2025,1132621782.0,Post-demographic dividend,,
+FCV,SP.POP.TOTL,2025,1103451863.0,"Fragility, Conflict, and Violence (FCV) situations",,
+HPC,SP.POP.TOTL,2025,965148593.0,Heavily indebted poor countries (HIPC),,
+ECS,SP.POP.TOTL,2025,932525035.0,Europe & Central Asia,,
+MEA,SP.POP.TOTL,2025,828025185.0,"Middle East, North Africa, Afghanistan & Pakistan",,
+AFE,SP.POP.TOTL,2025,788844284.0,Africa Eastern and Southern,,
+MNA,SP.POP.TOTL,2025,753903407.0,"Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",,
+TMN,SP.POP.TOTL,2025,748489811.0,"Middle East, North Africa, Afghanistan & Pakistan (IDA & IBRD)",,
+IDB,SP.POP.TOTL,2025,689783382.0,IDA blend,,
+LCN,SP.POP.TOTL,2025,666592570.0,Latin America & Caribbean,,
+TLA,SP.POP.TOTL,2025,651467364.0,Latin America & the Caribbean (IDA & IBRD countries),,
+LAC,SP.POP.TOTL,2025,626808315.0,Latin America & Caribbean (excluding high income),,
+AFW,SP.POP.TOTL,2025,532809933.0,Africa Western and Central,,
+ARB,SP.POP.TOTL,2025,503356133.0,Arab World,,
+TEC,SP.POP.TOTL,2025,462559433.0,Europe & Central Asia (IDA & IBRD countries),,
+EUU,SP.POP.TOTL,2025,451127411.0,European Union,,
+NAC,SP.POP.TOTL,2025,383501065.0,North America,,
+EMU,SP.POP.TOTL,2025,358664361.0,Euro area,,
+USA,SP.POP.TOTL,2025,341784857.0,United States,Americas,Northern America
+IDN,SP.POP.TOTL,2025,285721236.0,Indonesia,Asia,South-eastern Asia
+PAK,SP.POP.TOTL,2025,255219554.0,Pakistan,Asia,Southern Asia
+ECA,SP.POP.TOTL,2025,253280471.0,Europe & Central Asia (excluding high income),,
+NGA,SP.POP.TOTL,2025,237527782.0,Nigeria,Africa,Sub-Saharan Africa
+BRA,SP.POP.TOTL,2025,212812405.0,Brazil,Americas,Latin America and the Caribbean
+BGD,SP.POP.TOTL,2025,175686899.0,Bangladesh,Asia,Southern Asia
+RUS,SP.POP.TOTL,2025,143513328.0,Russian Federation,Europe,Eastern Europe
+ETH,SP.POP.TOTL,2025,135472051.0,Ethiopia,Africa,Sub-Saharan Africa
+MEX,SP.POP.TOTL,2025,131946900.0,Mexico,Americas,Latin America and the Caribbean
+JPN,SP.POP.TOTL,2025,123366734.0,Japan,Asia,Eastern Asia
+EGY,SP.POP.TOTL,2025,118365995.0,"Egypt, Arab Rep.",Africa,Northern Africa
+PHL,SP.POP.TOTL,2025,116786962.0,Philippines,Asia,South-eastern Asia
+COD,SP.POP.TOTL,2025,112832473.0,"Congo, Dem. Rep.",Africa,Sub-Saharan Africa
+VNM,SP.POP.TOTL,2025,101598527.0,Viet Nam,Asia,South-eastern Asia
+CEB,SP.POP.TOTL,2025,99814596.0,Central Europe and the Baltics,,
+IRN,SP.POP.TOTL,2025,92417681.0,"Iran, Islamic Rep.",Asia,Southern Asia
+TUR,SP.POP.TOTL,2025,85878556.0,Turkiye,Asia,Western Asia
+DEU,SP.POP.TOTL,2025,83491249.0,Germany,Europe,Western Europe
+THA,SP.POP.TOTL,2025,71619863.0,Thailand,Asia,South-eastern Asia
+TZA,SP.POP.TOTL,2025,70545865.0,Tanzania,Africa,Sub-Saharan Africa
+GBR,SP.POP.TOTL,2025,69487000.0,United Kingdom,Europe,Northern Europe
+FRA,SP.POP.TOTL,2025,68720337.0,France,Europe,Western Europe
+ZAF,SP.POP.TOTL,2025,64747319.0,South Africa,Africa,Sub-Saharan Africa
+ITA,SP.POP.TOTL,2025,58915656.0,Italy,Europe,Southern Europe
+KEN,SP.POP.TOTL,2025,57532493.0,Kenya,Africa,Sub-Saharan Africa
+MMR,SP.POP.TOTL,2025,54850648.0,Myanmar,Asia,South-eastern Asia
+COL,SP.POP.TOTL,2025,53425635.0,Colombia,Americas,Latin America and the Caribbean
+KOR,SP.POP.TOTL,2025,51684564.0,"Korea, Rep.",Asia,Eastern Asia
+SDN,SP.POP.TOTL,2025,51662147.0,Sudan,Africa,Northern Africa
+UGA,SP.POP.TOTL,2025,51384894.0,Uganda,Africa,Sub-Saharan Africa
+ESP,SP.POP.TOTL,2025,49355143.0,Spain,Europe,Southern Europe
+DZA,SP.POP.TOTL,2025,47435312.0,Algeria,Africa,Northern Africa
+IRQ,SP.POP.TOTL,2025,47020774.0,Iraq,Asia,Western Asia
+ARG,SP.POP.TOTL,2025,45851378.0,Argentina,Americas,Latin America and the Caribbean
+AFG,SP.POP.TOTL,2025,43844111.0,Afghanistan,Asia,Southern Asia
+YEM,SP.POP.TOTL,2025,41773878.0,"Yemen, Rep.",Asia,Western Asia
+CAN,SP.POP.TOTL,2025,41651653.0,Canada,Americas,Northern America
+AGO,SP.POP.TOTL,2025,39040039.0,Angola,Africa,Sub-Saharan Africa
+UKR,SP.POP.TOTL,2025,38980376.0,Ukraine,Europe,Eastern Europe
+MAR,SP.POP.TOTL,2025,38430770.0,Morocco,Africa,Northern Africa
+UZB,SP.POP.TOTL,2025,37053428.0,Uzbekistan,Asia,Central Asia
+SAU,SP.POP.TOTL,2025,36973555.0,Saudi Arabia,Asia,Western Asia
+POL,SP.POP.TOTL,2025,36435861.0,Poland,Europe,Eastern Europe
+MYS,SP.POP.TOTL,2025,35977838.0,Malaysia,Asia,South-eastern Asia
+MOZ,SP.POP.TOTL,2025,35631653.0,Mozambique,Africa,Sub-Saharan Africa
+GHA,SP.POP.TOTL,2025,35064272.0,Ghana,Africa,Sub-Saharan Africa
+PER,SP.POP.TOTL,2025,34576665.0,Peru,Americas,Latin America and the Caribbean
+MDG,SP.POP.TOTL,2025,32740678.0,Madagascar,Africa,Sub-Saharan Africa
+CIV,SP.POP.TOTL,2025,32711547.0,Cote d'Ivoire,Africa,Sub-Saharan Africa
+CMR,SP.POP.TOTL,2025,29879337.0,Cameroon,Africa,Sub-Saharan Africa
+NPL,SP.POP.TOTL,2025,29618118.0,Nepal,Asia,Southern Asia
+VEN,SP.POP.TOTL,2025,28516896.0,"Venezuela, RB",Americas,Latin America and the Caribbean
+NER,SP.POP.TOTL,2025,27917831.0,Niger,Africa,Sub-Saharan Africa
+AUS,SP.POP.TOTL,2025,27614411.0,Australia,Oceania,Australia and New Zealand
+PRK,SP.POP.TOTL,2025,26571036.0,"Korea, Dem. People's Rep.",Asia,Eastern Asia
+SYR,SP.POP.TOTL,2025,25620427.0,Syrian Arab Republic,Asia,Western Asia
+MLI,SP.POP.TOTL,2025,25198821.0,Mali,Africa,Sub-Saharan Africa
+BFA,SP.POP.TOTL,2025,24074580.0,Burkina Faso,Africa,Sub-Saharan Africa
+MWI,SP.POP.TOTL,2025,22216120.0,Malawi,Africa,Sub-Saharan Africa
+ZMB,SP.POP.TOTL,2025,21913874.0,Zambia,Africa,Sub-Saharan Africa
+LKA,SP.POP.TOTL,2025,21756000.0,Sri Lanka,Asia,Southern Asia
+TCD,SP.POP.TOTL,2025,21003705.0,Chad,Africa,Sub-Saharan Africa
+KAZ,SP.POP.TOTL,2025,20843754.0,Kazakhstan,Asia,Central Asia
+SST,SP.POP.TOTL,2025,20347135.0,Small states,,
+CHL,SP.POP.TOTL,2025,19859921.0,Chile,Americas,Latin America and the Caribbean
+SOM,SP.POP.TOTL,2025,19654739.0,"Somalia, Fed. Rep.",Africa,Sub-Saharan Africa
+ROU,SP.POP.TOTL,2025,19020271.0,Romania,Europe,Eastern Europe
+SEN,SP.POP.TOTL,2025,18931966.0,Senegal,Africa,Sub-Saharan Africa
+GTM,SP.POP.TOTL,2025,18687881.0,Guatemala,Americas,Latin America and the Caribbean
+ECU,SP.POP.TOTL,2025,18289896.0,Ecuador,Americas,Latin America and the Caribbean
+NLD,SP.POP.TOTL,2025,18087633.0,Netherlands,Europe,Western Europe
+KHM,SP.POP.TOTL,2025,17847982.0,Cambodia,Asia,South-eastern Asia
+ZWE,SP.POP.TOTL,2025,16950795.0,Zimbabwe,Africa,Sub-Saharan Africa
+GIN,SP.POP.TOTL,2025,15099727.0,Guinea,Africa,Sub-Saharan Africa
+BEN,SP.POP.TOTL,2025,14814460.0,Benin,Africa,Sub-Saharan Africa
+RWA,SP.POP.TOTL,2025,14569341.0,Rwanda,Africa,Sub-Saharan Africa
+BDI,SP.POP.TOTL,2025,14390003.0,Burundi,Africa,Sub-Saharan Africa
+OSS,SP.POP.TOTL,2025,13034928.0,Other small states,,
+BOL,SP.POP.TOTL,2025,12581843.0,Bolivia,Americas,Latin America and the Caribbean
+TUN,SP.POP.TOTL,2025,12348573.0,Tunisia,Africa,Northern Africa
+SSD,SP.POP.TOTL,2025,12188788.0,South Sudan,Africa,Sub-Saharan Africa
+BEL,SP.POP.TOTL,2025,11941781.0,Belgium,Europe,Western Europe
+HTI,SP.POP.TOTL,2025,11906095.0,Haiti,Americas,Latin America and the Caribbean
+JOR,SP.POP.TOTL,2025,11520684.0,Jordan,Asia,Western Asia
+DOM,SP.POP.TOTL,2025,11520487.0,Dominican Republic,Americas,Latin America and the Caribbean
+ARE,SP.POP.TOTL,2025,11513149.0,United Arab Emirates,Asia,Western Asia
+HND,SP.POP.TOTL,2025,11005850.0,Honduras,Americas,Latin America and the Caribbean
+CUB,SP.POP.TOTL,2025,10937203.0,Cuba,Americas,Latin America and the Caribbean
+CZE,SP.POP.TOTL,2025,10886878.0,Czechia,Europe,Eastern Europe
+PRT,SP.POP.TOTL,2025,10804871.0,Portugal,Europe,Southern Europe
+TJK,SP.POP.TOTL,2025,10786734.0,Tajikistan,Asia,Central Asia
+PNG,SP.POP.TOTL,2025,10762817.0,Papua New Guinea,Oceania,Melanesia
+SWE,SP.POP.TOTL,2025,10596620.0,Sweden,Europe,Northern Europe
+GRC,SP.POP.TOTL,2025,10413962.0,Greece,Europe,Southern Europe
+AZE,SP.POP.TOTL,2025,10246996.0,Azerbaijan,Asia,Western Asia
+ISR,SP.POP.TOTL,2025,10122800.0,Israel,Asia,Western Asia
+HUN,SP.POP.TOTL,2025,9514251.0,Hungary,Europe,Eastern Europe
+AUT,SP.POP.TOTL,2025,9208163.0,Austria,Europe,Western Europe
+CHE,SP.POP.TOTL,2025,9092436.0,Switzerland,Europe,Western Europe
+BLR,SP.POP.TOTL,2025,9085991.0,Belarus,Europe,Eastern Europe
+SLE,SP.POP.TOTL,2025,8819794.0,Sierra Leone,Africa,Sub-Saharan Africa
+TGO,SP.POP.TOTL,2025,8591626.0,Togo,Africa,Sub-Saharan Africa
+LAO,SP.POP.TOTL,2025,7873046.0,Lao PDR,Asia,South-eastern Asia
+TKM,SP.POP.TOTL,2025,7618847.0,Turkmenistan,Asia,Central Asia
+HKG,SP.POP.TOTL,2025,7498900.0,"Hong Kong SAR, China",Asia,Eastern Asia
+LBY,SP.POP.TOTL,2025,7458555.0,Libya,Africa,Northern Africa
+KGZ,SP.POP.TOTL,2025,7343064.0,Kyrgyz Republic,Asia,Central Asia
+PRY,SP.POP.TOTL,2025,7013078.0,Paraguay,Americas,Latin America and the Caribbean
+NIC,SP.POP.TOTL,2025,7007502.0,Nicaragua,Americas,Latin America and the Caribbean
+SRB,SP.POP.TOTL,2025,6549143.0,Serbia,Europe,Southern Europe
+COG,SP.POP.TOTL,2025,6484437.0,"Congo, Rep.",Africa,Sub-Saharan Africa
+BGR,SP.POP.TOTL,2025,6433302.0,Bulgaria,Europe,Eastern Europe
+SLV,SP.POP.TOTL,2025,6365503.0,El Salvador,Americas,Latin America and the Caribbean
+SGP,SP.POP.TOTL,2025,6111175.0,Singapore,Asia,South-eastern Asia
+DNK,SP.POP.TOTL,2025,6009169.0,Denmark,Europe,Northern Europe
+LBN,SP.POP.TOTL,2025,5849421.0,Lebanon,Asia,Western Asia
+LBR,SP.POP.TOTL,2025,5731206.0,Liberia,Africa,Sub-Saharan Africa
+FIN,SP.POP.TOTL,2025,5646436.0,Finland,Europe,Northern Europe
+NOR,SP.POP.TOTL,2025,5610870.0,Norway,Europe,Northern Europe
+CAF,SP.POP.TOTL,2025,5513282.0,Central African Republic,Africa,Sub-Saharan Africa
+OMN,SP.POP.TOTL,2025,5494691.0,Oman,Asia,Western Asia
+IRL,SP.POP.TOTL,2025,5484367.0,Ireland,Europe,Northern Europe
+SVK,SP.POP.TOTL,2025,5413813.0,Slovak Republic,Europe,Eastern Europe
+PSE,SP.POP.TOTL,2025,5413596.0,West Bank and Gaza,Asia,Western Asia
+NZL,SP.POP.TOTL,2025,5324700.0,New Zealand,Oceania,Australia and New Zealand
+MRT,SP.POP.TOTL,2025,5315065.0,Mauritania,Africa,Sub-Saharan Africa
+CRI,SP.POP.TOTL,2025,5152950.0,Costa Rica,Americas,Latin America and the Caribbean
+KWT,SP.POP.TOTL,2025,4865298.0,Kuwait,Asia,Western Asia
+PAN,SP.POP.TOTL,2025,4571189.0,Panama,Americas,Latin America and the Caribbean
+CSS,SP.POP.TOTL,2025,4556558.0,Caribbean small states,,
+GEO,SP.POP.TOTL,2025,3935766.0,Georgia,Asia,Western Asia
+HRV,SP.POP.TOTL,2025,3876200.0,Croatia,Europe,Southern Europe
+ERI,SP.POP.TOTL,2025,3607003.0,Eritrea,Africa,Sub-Saharan Africa
+MNG,SP.POP.TOTL,2025,3568978.0,Mongolia,Asia,Eastern Asia
+URY,SP.POP.TOTL,2025,3384688.0,Uruguay,Americas,Latin America and the Caribbean
+PRI,SP.POP.TOTL,2025,3184835.0,Puerto Rico (US),Americas,Latin America and the Caribbean
+BIH,SP.POP.TOTL,2025,3140095.0,Bosnia and Herzegovina,Europe,Southern Europe
+NAM,SP.POP.TOTL,2025,3092816.0,Namibia,Africa,Sub-Saharan Africa
+ARM,SP.POP.TOTL,2025,3086700.0,Armenia,Asia,Western Asia
+QAT,SP.POP.TOTL,2025,2972215.0,Qatar,Asia,Western Asia
+LTU,SP.POP.TOTL,2025,2888774.0,Lithuania,Europe,Northern Europe
+JAM,SP.POP.TOTL,2025,2837077.0,Jamaica,Americas,Latin America and the Caribbean
+GMB,SP.POP.TOTL,2025,2822093.0,"Gambia, The",Africa,Sub-Saharan Africa
+PSS,SP.POP.TOTL,2025,2755649.0,Pacific island small states,,
+GAB,SP.POP.TOTL,2025,2593130.0,Gabon,Africa,Sub-Saharan Africa
+BWA,SP.POP.TOTL,2025,2562122.0,Botswana,Africa,Sub-Saharan Africa
+LSO,SP.POP.TOTL,2025,2363325.0,Lesotho,Africa,Sub-Saharan Africa
+MDA,SP.POP.TOTL,2025,2360527.0,Moldova,Europe,Eastern Europe
+ALB,SP.POP.TOTL,2025,2349580.0,Albania,Europe,Southern Europe
+GNB,SP.POP.TOTL,2025,2249515.0,Guinea-Bissau,Africa,Sub-Saharan Africa
+SVN,SP.POP.TOTL,2025,2130986.0,Slovenia,Europe,Southern Europe
+GNQ,SP.POP.TOTL,2025,1938431.0,Equatorial Guinea,Africa,Sub-Saharan Africa
+LVA,SP.POP.TOTL,2025,1847785.0,Latvia,Europe,Northern Europe
+MKD,SP.POP.TOTL,2025,1820909.0,North Macedonia,Europe,Southern Europe
+BHR,SP.POP.TOTL,2025,1600366.0,Bahrain,Asia,Western Asia
+XKX,SP.POP.TOTL,2025,1576876.0,Kosovo,,
+TLS,SP.POP.TOTL,2025,1418517.0,Timor-Leste,Asia,South-eastern Asia
+CYP,SP.POP.TOTL,2025,1370754.0,Cyprus,Asia,Western Asia
+TTO,SP.POP.TOTL,2025,1367764.0,Trinidad and Tobago,Americas,Latin America and the Caribbean
+EST,SP.POP.TOTL,2025,1366475.0,Estonia,Europe,Northern Europe
+SWZ,SP.POP.TOTL,2025,1256174.0,Eswatini,Africa,Sub-Saharan Africa
+MUS,SP.POP.TOTL,2025,1243741.0,Mauritius,Africa,Sub-Saharan Africa
+DJI,SP.POP.TOTL,2025,1184076.0,Djibouti,Africa,Sub-Saharan Africa
+FJI,SP.POP.TOTL,2025,933154.0,Fiji,Oceania,Melanesia
+COM,SP.POP.TOTL,2025,882847.0,Comoros,Africa,Sub-Saharan Africa
+SLB,SP.POP.TOTL,2025,838645.0,Solomon Islands,Oceania,Melanesia
+GUY,SP.POP.TOTL,2025,835986.0,Guyana,Americas,Latin America and the Caribbean
+BTN,SP.POP.TOTL,2025,796682.0,Bhutan,Asia,Southern Asia
+LUX,SP.POP.TOTL,2025,686970.0,Luxembourg,Europe,Western Europe
+MAC,SP.POP.TOTL,2025,685900.0,"Macao SAR, China",Asia,Eastern Asia
+SUR,SP.POP.TOTL,2025,639850.0,Suriname,Americas,Latin America and the Caribbean
+MNE,SP.POP.TOTL,2025,623129.0,Montenegro,Europe,Southern Europe
+MLT,SP.POP.TOTL,2025,579704.0,Malta,Europe,Southern Europe
+MDV,SP.POP.TOTL,2025,529676.0,Maldives,Asia,Southern Asia
+CPV,SP.POP.TOTL,2025,527326.0,Cabo Verde,Africa,Sub-Saharan Africa
+BRN,SP.POP.TOTL,2025,466330.0,Brunei Darussalam,Asia,South-eastern Asia
+BLZ,SP.POP.TOTL,2025,422924.0,Belize,Americas,Latin America and the Caribbean
+BHS,SP.POP.TOTL,2025,403033.0,"Bahamas, The",Americas,Latin America and the Caribbean
+ISL,SP.POP.TOTL,2025,392404.0,Iceland,Europe,Northern Europe
+VUT,SP.POP.TOTL,2025,335169.0,Vanuatu,Oceania,Melanesia
+NCL,SP.POP.TOTL,2025,295333.0,New Caledonia,Oceania,Melanesia
+BRB,SP.POP.TOTL,2025,282623.0,Barbados,Americas,Latin America and the Caribbean
+PYF,SP.POP.TOTL,2025,282465.0,French Polynesia,Oceania,Polynesia
+STP,SP.POP.TOTL,2025,240254.0,Sao Tome and Principe,Africa,Sub-Saharan Africa
+WSM,SP.POP.TOTL,2025,219306.0,Samoa,Oceania,Polynesia
+LCA,SP.POP.TOTL,2025,180149.0,St. Lucia,Americas,Latin America and the Caribbean
+GUM,SP.POP.TOTL,2025,168999.0,Guam,Oceania,Micronesia
+CHI,SP.POP.TOTL,2025,168466.0,Channel Islands,,
+CUW,SP.POP.TOTL,2025,156263.0,Curacao,Americas,Latin America and the Caribbean
+KIR,SP.POP.TOTL,2025,136488.0,Kiribati,Oceania,Micronesia
+SYC,SP.POP.TOTL,2025,122730.0,Seychelles,Africa,Sub-Saharan Africa
+GRD,SP.POP.TOTL,2025,117303.0,Grenada,Americas,Latin America and the Caribbean
+FSM,SP.POP.TOTL,2025,113683.0,"Micronesia, Fed. Sts.",Oceania,Micronesia
+ABW,SP.POP.TOTL,2025,108785.0,Aruba,Americas,Latin America and the Caribbean
+VIR,SP.POP.TOTL,2025,103792.0,Virgin Islands (U.S.),Americas,Latin America and the Caribbean
+TON,SP.POP.TOTL,2025,103742.0,Tonga,Oceania,Polynesia
+VCT,SP.POP.TOTL,2025,99924.0,St. Vincent and the Grenadines,Americas,Latin America and the Caribbean
+ATG,SP.POP.TOTL,2025,94209.0,Antigua and Barbuda,Americas,Latin America and the Caribbean
+IMN,SP.POP.TOTL,2025,84118.0,Isle of Man,Europe,Northern Europe
+AND,SP.POP.TOTL,2025,82904.0,Andorra,Europe,Southern Europe
+CYM,SP.POP.TOTL,2025,75844.0,Cayman Islands,Americas,Latin America and the Caribbean
+DMA,SP.POP.TOTL,2025,65871.0,Dominica,Americas,Latin America and the Caribbean
+BMU,SP.POP.TOTL,2025,64555.0,Bermuda,Americas,Northern America
+GRL,SP.POP.TOTL,2025,56831.0,Greenland,Americas,Northern America
+FRO,SP.POP.TOTL,2025,54900.0,Faroe Islands,Europe,Northern Europe
+KNA,SP.POP.TOTL,2025,46922.0,St. Kitts and Nevis,Americas,Latin America and the Caribbean
+TCA,SP.POP.TOTL,2025,46855.0,Turks and Caicos Islands,Americas,Latin America and the Caribbean
+ASM,SP.POP.TOTL,2025,46029.0,American Samoa,Oceania,Polynesia
+SXM,SP.POP.TOTL,2025,43923.0,Sint Maarten (Dutch part),Americas,Latin America and the Caribbean
+MNP,SP.POP.TOTL,2025,43541.0,Northern Mariana Islands,Oceania,Micronesia
+LIE,SP.POP.TOTL,2025,41024.0,Liechtenstein,Europe,Western Europe
+GIB,SP.POP.TOTL,2025,40126.0,Gibraltar,Europe,Southern Europe
+VGB,SP.POP.TOTL,2025,39732.0,British Virgin Islands,Americas,Latin America and the Caribbean
+MCO,SP.POP.TOTL,2025,38341.0,Monaco,Europe,Western Europe
+MHL,SP.POP.TOTL,2025,36282.0,Marshall Islands,Oceania,Micronesia
+SMR,SP.POP.TOTL,2025,34109.0,San Marino,Europe,Southern Europe
+MAF,SP.POP.TOTL,2025,24941.0,St. Martin (French part),Americas,Latin America and the Caribbean
+PLW,SP.POP.TOTL,2025,17663.0,Palau,Oceania,Micronesia
+NRU,SP.POP.TOTL,2025,12025.0,Naoero,Oceania,Micronesia
+TUV,SP.POP.TOTL,2025,9492.0,Tuvalu,Oceania,Polynesia

@@ -10,7 +10,7 @@ Project #4 of a [data engineering portfolio](https://github.com/Abdelrahman-0-20
 **The orchestration axis:** [World Bank development indicators](https://api.worldbank.org)
 (no API key) → a **Dagster asset graph** (daily schedule, filesystem sensor,
 exponential-backoff retries, daily partitions for backfills) → typed layers in
-**DuckDB** → gold marts — proven by **40 pytest tests that never touch the
+**DuckDB** → gold marts — proven by **42 pytest tests that never touch the
 network**, gated by `./verify.sh`, run by **GitHub Actions**. No cloud
 accounts, no API keys, no docker: `pip install` and `dagster dev`.
 
@@ -41,7 +41,7 @@ api.worldbank.org (paginated, retried)          ISO 3166 CSV (SHA-pinned)
         └── gold_backfill (daily-partitioned — the backfill story)
 
 dagster_pipeline: defs = Definitions(assets ×6, job, daily schedule, sensor)
-tests/          :40 hermetic tests (fixtures recorded once, zero network)
+tests/          :42 hermetic tests (fixtures recorded once, zero network)
 ```
 
 ## Run it
@@ -57,6 +57,8 @@ dagster job execute -m dagster_pipeline.definitions -j daily_world_bank_refresh
 # against the live World Bank API; gold_backfill is partition-only, excluded)
 ```
 
+streamlit run dashboard/app.py      # the gold-layer dashboard (see below)
+
 Backfills: select a partition in the Dagster UI (gold_backfill is
 daily-partitioned), or from code:
 
@@ -65,6 +67,20 @@ from dagster import materialize
 from dagster_pipeline.assets import gold_backfill
 materialize([gold_backfill], partition_key="2024-01-01")
 ```
+
+## Dashboard
+
+`dashboard/app.py` is a Streamlit app over the **gold layer only** — country
+trends (GDP/population with year-over-year metrics), regional totals, and a
+latest-value ranking with an aggregate filter.
+
+Its data is **CSV-first**: the warehouse is a gitignored build artifact, so CI
+runs the production job, exports `dashboard/data/*.csv` (deterministic
+ORDER BYs — no churn commits) and commits them back with `[skip ci]`. Locally
+the app prefers the live warehouse and falls back to the CSVs; on Streamlit
+Cloud the CSVs are all it needs (that path is tested). Deploy by connecting
+the repo on [share.streamlit.io](https://share.streamlit.io) — CI keeps the
+data fresh forever.
 
 ## Testing philosophy: fixtures, not the network
 
@@ -95,12 +111,12 @@ ordering) is exercised without a single HTTP call.
 > Built an orchestration-layer pipeline (Python + Dagster + DuckDB): a
 > dependency-ordered asset graph over the World Bank API with retries, a daily
 > schedule, a filesystem sensor and daily-partitioned backfills; typed
-> raw→silver→gold layers with a named-error data contract;40 hermetic tests
+> raw→silver→gold layers with a named-error data contract;42 hermetic tests
 > (fixtures, zero network), one `./verify.sh` gate, GitHub Actions on every push.
 
 ## Roadmap
 
-- Publish a live demo once the repo is on GitHub (CI badge turns green on first push)
+- Deploy the dashboard on Streamlit Cloud and add the live-demo badge here
 - `dagster dev` screenshots in this README
 - Wire the sensor's RunRequests to land incoming files (currently trigger-only)
 - dbt on top of the gold layer (port project #3's pattern)
