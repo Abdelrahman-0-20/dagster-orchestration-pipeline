@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import os
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -18,6 +19,12 @@ import yaml
 from dagster import AssetKey, Backoff, DailyPartitionsDefinition, RetryPolicy, asset
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# The dagster console script does not put the repo root on sys.path (pytest
+# gets it from conftest; the CLI does not) — bootstrap it so deferred
+# "from src.*" imports resolve wherever the graph runs.
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 # Retried with exponential backoff; raw landing is content-addressed, so a
 # retry after a partial fetch re-lands only new rows (idempotent by design).

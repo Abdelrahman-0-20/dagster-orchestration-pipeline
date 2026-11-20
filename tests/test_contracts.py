@@ -20,21 +20,31 @@ def test_valid_world_bank_row_passes(wb_page1):
 
 
 def test_contract_from_config_matches_charter(config):
-    """config.yaml declares required fields for every source."""
+    """config.yaml declares required fields for every source.
+
+    world_bank required fields are STRUCTURE only (these must exist and be
+    non-null). value and countryiso3code are deliberately absent: null value
+    means "no observation" and "" means "no ISO code" upstream — silver
+    counts and drops both (policy), it does not fail on them.
+    """
     required = config["contracts"]["world_bank"]["required_fields"]
-    for field in ("indicator", "country", "countryiso3code", "date", "value"):
+    for field in ("indicator", "country", "date"):
         assert field in required
+    for policy_field in ("value", "countryiso3code"):
+        assert policy_field not in required, (
+            f"{policy_field} is silver policy, not a structural requirement"
+        )
     assert "alpha-3" in config["contracts"]["iso3166"]["required_fields"]
 
 
 def test_missing_required_field_raises_named_error(wb_page1):
     row = _valid_row(wb_page1)
-    del row["countryiso3code"]
+    del row["date"]
     with pytest.raises(ContractViolation) as excinfo:
         validate_row("world_bank", row)
-    assert excinfo.value.field == "countryiso3code"
+    assert excinfo.value.field == "date"
     assert excinfo.value.source == "world_bank"
-    assert "countryiso3code" in str(excinfo.value)
+    assert "date" in str(excinfo.value)
 
 
 def test_wrong_type_raises_named_error(wb_page1):
@@ -45,12 +55,12 @@ def test_wrong_type_raises_named_error(wb_page1):
     assert excinfo.value.field == "value"
 
 
-def test_null_value_fails_loud(wb_page1):
+def test_null_value_is_policy_not_a_violation(wb_page1):
+    """value=null means "no observation" upstream (2,841 real rows): the
+    contract passes it through; silver counts and drops it."""
     row = _valid_row(wb_page1)
     row["value"] = None
-    with pytest.raises(ContractViolation) as excinfo:
-        validate_row("world_bank", row)
-    assert excinfo.value.field == "value"
+    assert validate_row("world_bank", row) is row
 
 
 def test_validate_rows_counts_and_fails_loud(wb_page1):

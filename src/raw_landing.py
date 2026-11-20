@@ -74,7 +74,7 @@ def ingest(
     ``now`` is injectable so tests can prove a rerun preserves the original
     ``_ingested_at`` timestamps (byte-identical rerun).
     """
-    clock = now or (lambda: _dt.datetime.utcnow())
+    clock = now or (lambda: _dt.datetime.now(_dt.timezone.utc).replace(tzinfo=None))
     rows = list(rows)
     ensure_schema(con)
 

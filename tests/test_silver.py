@@ -61,11 +61,28 @@ def test_contract_failure_is_named_and_leaves_silver_untouched(wb_page1, wb_page
     before = silver_snapshot(con)
 
     good = _fixture_rows(wb_page1, wb_page2)[0]
-    ingest(con, [dict(good, value=None)])  # raw is faithful; silver must reject
+    # empty date: storable in raw (TEXT column), but a structural violation
+    ingest(con, [dict(good, date="")])
     with pytest.raises(ContractViolation) as excinfo:
         build_silver(con)
-    assert "value" in str(excinfo.value)
+    assert "date" in str(excinfo.value)
     assert silver_snapshot(con) == before  # nothing was written
+
+
+def test_absent_and_unclassifiable_rows_are_dropped_loudly(wb_page1, wb_page2):
+    """Production reality: value=null (no observation) and countryiso3code=""
+    (entity has no ISO code) are policy drops with counts, not violations."""
+    good = _fixture_rows(wb_page1, wb_page2)[0]
+    con = _loaded(
+        wb_page1,
+        wb_page2,
+        extra=[dict(good, value=None), dict(good, countryiso3code="")],
+    )
+    stats = build_silver(con)
+    assert stats["absent_measurements"] == 1
+    assert stats["unclassifiable_entities"] == 1
+    assert stats["silver_rows"] == 4  # only eligible rows landed
+    assert stats["raw_rows"] == 6
 
 
 def test_silver_rebuild_is_byte_identical(wb_page1, wb_page2):

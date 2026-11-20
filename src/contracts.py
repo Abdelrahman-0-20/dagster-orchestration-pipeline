@@ -19,8 +19,11 @@ class ContractViolation(Exception):
 
 
 # Defaults; config.yaml `contracts:` may override per source.
+# world_bank = STRUCTURE only: value==null (no observation) and
+# countryiso3code=="" (entity without an ISO code) are silver policy —
+# counted and dropped there, never violations (learned from35k real rows).
 DEFAULT_REQUIRED_FIELDS: Dict[str, Sequence[str]] = {
-    "world_bank": ("indicator", "country", "countryiso3code", "date", "value"),
+    "world_bank": ("indicator", "country", "date"),
     "iso3166": ("name", "alpha-3", "region"),
 }
 
@@ -58,20 +61,27 @@ def validate_row(
             raise ContractViolation(
                 source, "date", f"expected non-empty str, got {type(date).__name__}"
             )
-        value = row["value"]
-        if isinstance(value, bool) or not isinstance(value, (int, float)):
+        value = row.get("value")
+        # value == null is "no observation" upstream (2,841 real rows): silver
+        # counts and drops it — only a WRONG TYPE is a violation.
+        if value is not None and (
+            isinstance(value, bool) or not isinstance(value, (int, float))
+        ):
             raise ContractViolation(
                 source,
                 "value",
-                f"expected numeric, got {type(value).__name__}",
+                f"expected numeric or null, got {type(value).__name__}",
             )
-        iso3 = row["countryiso3code"]
-        if not isinstance(iso3, str) or len(iso3.strip()) != 3:
-            raise ContractViolation(
-                source,
-                "countryiso3code",
-                f"expected 3-letter str, got {iso3!r}",
-            )
+        iso3 = row.get("countryiso3code")
+        # some entities have no ISO code at all (660 real rows): policy, not
+        # violation — only a MALFORMED non-empty code fails loud.
+        if iso3 is not None and str(iso3).strip():
+            if not isinstance(iso3, str) or len(iso3.strip()) != 3:
+                raise ContractViolation(
+                    source,
+                    "countryiso3code",
+                    f"expected 3-letter str, got {iso3!r}",
+                )
     return row
 
 

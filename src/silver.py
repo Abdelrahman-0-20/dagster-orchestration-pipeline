@@ -55,16 +55,34 @@ def _project(payload: Mapping, source_row_sha256: str) -> Tuple:
 def build_silver(con: duckdb.DuckDBPyConnection) -> Dict[str, int]:
     """Rebuild silver_observations from raw_observations.
 
-    Phase 1 validates EVERY payload (fail loud before any write); phase 2
-    deduplicates deterministically — one row per natural key
-    (country_iso3, indicator_id, obs_year), keeping the smallest
-    source_row_sha256 lexicographically — then replaces the table.
+    Phase 1 applies POLICY: absent measurements and entities without an ISO
+    code are counted and dropped (they are upstream reality, not violations).
+    Phase 2 validates every eligible payload — structural violations raise
+    the named ContractViolation BEFORE any write. Phase 3 deduplicates
+    deterministically (one row per natural key, smallest source_row_sha256
+    wins) and replaces the table.
     """
     raw = con.execute(
         "SELECT row_sha256, payload FROM raw_observations ORDER BY row_sha256"
     ).fetchall()
 
-    projected = [_project(json.loads(payload), sha) for sha, payload in raw]
+    # Policy (not contract): an absent measurement or an entity without an ISO
+    # code is legitimate upstream reality — drop it LOUDLY (counted in stats),
+    # never silently. Everything eligible still goes through validate_row,
+    # which fails loud on structural violations.
+    parsed = [(sha, json.loads(payload)) for sha, payload in raw]
+    absent = [1 for _, d in parsed if d.get("value") is None]
+    unclassifiable = [
+        1 for _, d in parsed if not str(d.get("countryiso3code") or "").strip()
+    ]
+    eligible = [
+        (sha, d)
+        for sha, d in parsed
+        if d.get("value") is not None
+        and str(d.get("countryiso3code") or "").strip()
+    ]
+
+    projected = [_project(d, sha) for sha, d in eligible]
 
     deduped: Dict[Tuple, Tuple] = {}
     for row in projected:
@@ -80,8 +98,10 @@ def build_silver(con: duckdb.DuckDBPyConnection) -> Dict[str, int]:
     )
     return {
         "raw_rows": len(raw),
+        "absent_measurements": len(absent),
+        "unclassifiable_entities": len(unclassifiable),
         "silver_rows": len(rows),
-        "deduplicated": len(raw) - len(rows),
+        "deduplicated": len(eligible) - len(rows),
     }
 
 

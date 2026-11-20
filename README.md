@@ -1,67 +1,106 @@
-# dagster-orchestration-pipeline — charter (M0)
+# dagster-orchestration-pipeline
 
-**Project #4 of the data engineering portfolio — the orchestration axis.**
-A Dagster asset pipeline over **World Bank development indicators** (no API key)
-→ typed layers in **DuckDB** → gold marts, proven by **pytest**, scheduled by
-**Dagster**, run by **GitHub Actions**. No cloud accounts, no docker required:
-Dagster installs with pip and `dagster dev` serves the UI locally.
+[![verify](https://github.com/Abdelrahman-0-20/dagster-orchestration-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/Abdelrahman-0-20/dagster-orchestration-pipeline/actions/workflows/ci.yml)
 
-> This charter is the spec. All code comes from the relay
-> (Planner → Builder → Verifier), one milestone per run.
+Project #4 of a [data engineering portfolio](https://github.com/Abdelrahman-0-20/api-ingestion-pipeline)
+(companions: [API ingestion](https://github.com/Abdelrahman-0-20/api-ingestion-pipeline) ·
+[analytics engineering](https://github.com/Abdelrahman-0-20/analytics-engineering-pipeline) ·
+[dbt + DuckDB ELT](https://github.com/Abdelrahman-0-20/energy-analytics-dbt)).
 
-## Requirements
+**The orchestration axis:** [World Bank development indicators](https://api.worldbank.org)
+(no API key) → a **Dagster asset graph** (daily schedule, filesystem sensor,
+exponential-backoff retries, daily partitions for backfills) → typed layers in
+**DuckDB** → gold marts — proven by **40 pytest tests that never touch the
+network**, gated by `./verify.sh`, run by **GitHub Actions**. No cloud
+accounts, no API keys, no docker: `pip install` and `dagster dev`.
 
-1. **Layout:** `config.yaml` (sources + contracts + paths — thresholds are
-   data, never code), `src/` (pure functions + API client),
-   `dagster_pipeline/` (assets, schedules, sensors, retry policy),
-   `tests/` with `tests/fixtures/`, `.github/workflows/ci.yml`,
-   `./verify.sh`, `README.md`, `requirements.txt`; `.venv/`, `warehouse/`,
-   `__pycache__/` gitignored.
-2. **Sources:** World Bank API v2 (`api.worldbank.org/v2`, **no key**) —
-   ≥2 indicators × all countries, **paginated** — plus one **SHA-pinned static
-   CSV** (ISO 3166 country → region from raw.githubusercontent.com). Tests are
-   **zero-network**: API responses served from `tests/fixtures/` (recorded
-   JSON) through an injected fetch function.
-3. **Warehouse:** DuckDB at `warehouse/pipeline.duckdb` with layers
-   `raw_*` (immutable landing + ``_ingested_at`` + sha256 ingest log — a
-   rerun is byte-identical) → `silver_*` (typed, conformed, deduplicated) →
-   `gold_*` (marts: latest value per country, trends, regional aggregates).
-4. **Dagster primitives (all four, defined and tested):** an `@asset` graph
-   mirroring the layers (raw → silver → gold); a **`@daily` schedule**; one
-   **sensor** (filesystem watch on `data/incoming/`); an explicit
-   **RetryPolicy** on the API asset; one **`@daily_partitioned` asset**
-   (the backfill story).
-5. **Data contract:** required fields per source enforced at the raw → silver
-   boundary; violations fail loud with named errors (never silent drops).
-6. **Tests: ≥25, hermetic (no network)** — contract, cleaning, idempotent
-   rerun, gold invariants (ranges/uniqueness/referential integrity), asset
-   materialization via `materialize()`, and existence/shape of schedule,
-   sensor, retry policy, partition.
-7. **`./verify.sh`** exits 0: `python -m pytest -q` (bare, no masking pipes)
-   + YAML parse of config + CI workflow + `python -m compileall -q src
-   dagster_pipeline`. Runs from repo root against `.venv`.
-8. **CI:** GitHub Actions on push/PR + weekly cron builds `.venv` from
-   `requirements.txt` and runs `./verify.sh`; badge in README.
-9. **README:** architecture diagram, "Design decisions (interview talking
-   points)" table, resume line, run instructions, badge placeholders
-   (repo not yet created on GitHub — no live URLs).
-10. **Commits:** conventional; **each milestone ends with exactly one commit**
-    (`M1: …`, `M2: …`, `M3: …`) and a clean `git status`.
+**At a glance (verified against the live API):**35,112 raw rows →31,743
+silver (3,369 policy-dropped: absent measurements + no-ISO entities, counted
+loudly) →519 latest-value rows and792 region aggregates across6 regions ·
+re-ingest inserted0 duplicates (production idempotency) · named-error contract
+at the boundary · SHA-pinned reference data (checksum-verified before load) ·
+asset graph order encoded in Dagster deps (gold can never run before silver).
 
-## Milestones
+## Architecture
 
-| Milestone | Scope | Gate |
-|---|---|---|
-| **M1a** | skeleton + config + World Bank client (pagination, retry, fixture-injectable — `tests/fixtures/` already recorded) + raw landing (ingest log, idempotent); **≥6 tests** | `./verify.sh` exit 0, one commit |
-| **M1b** | silver transform + named-error data contract at raw→silver; **≥12 tests total** | `./verify.sh` exit 0, one commit |
+```
+api.worldbank.org (paginated, retried)          ISO 3166 CSV (SHA-pinned)
+        │ fetch_world_bank (RetryPolicy×3)             │ fetch_reference
+        ▼                                              ▼
+  raw_observations                              data/raw/iso3166.csv
+  (content-addressed, ingest log,                      │ reference_countries
+   byte-identical rerun)                               │ (sha-verified copy)
+        │ silver_layer                                       │
+        ▼                                                    │
+  silver_observations  ◄──── named ContractViolation ────────┤
+  (typed, conformed, deduped)    never silent drops          │
+        ├─────────────────────────────────────────────────────┘
+        ▼
+  gold_latest_by_country · gold_trend · gold_region_aggregate
+        ▲
+        └── gold_backfill (daily-partitioned — the backfill story)
 
-> *Amendment (post-M0): M1 split into M1a/M1b so each relay cycle fits the
-> orchestrator's 10-minute window (planner runs on pro/high and consumes ~half
-> of it). Same scope, two gates.*
-| **M2** | gold marts + contract/quality tests + full Dagster graph (assets, daily schedule, sensor, RetryPolicy, partitioned asset); **≥25 tests total** | `./verify.sh` exit 0, one commit |
-| **M3** | CI workflow + README (architecture, decisions, resume line) + polish | `./verify.sh` exit 0, one commit; **no push without human instruction** |
+dagster_pipeline: defs = Definitions(assets ×6, job, daily schedule, sensor)
+tests/          :40 hermetic tests (fixtures recorded once, zero network)
+```
 
-## Gate
+## Run it
 
-`./verify.sh` must exit 0. Verification commands run bare (the last segment of
-the command owns the exit code).
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+./verify.sh                        # the gate: pytest + config/CI parse + compileall
+dagster dev                        # UI + daemon on localhost:3000
+dagster job execute -m dagster_pipeline.definitions -j daily_world_bank_refresh
+# the daily refresh: fetch -> reference -> silver -> gold (verified end-to-end
+# against the live World Bank API; gold_backfill is partition-only, excluded)
+```
+
+Backfills: select a partition in the Dagster UI (gold_backfill is
+daily-partitioned), or from code:
+
+```python
+from dagster import materialize
+from dagster_pipeline.assets import gold_backfill
+materialize([gold_backfill], partition_key="2024-01-01")
+```
+
+## Testing philosophy: fixtures, not the network
+
+The World Bank responses used by tests are **recorded once** into
+`tests/fixtures/` and served through an injected fetch function — every test
+runs offline and deterministically. Dagster's network assets are replaced
+**by key** with stubs in tests, so the real dependency graph (including
+ordering) is exercised without a single HTTP call.
+
+## Design decisions (interview talking points)
+
+| Decision | Why |
+|---|---|
+| Asset deps encode production order | gold can never race silver; the daily job follows the graph, not hope |
+| Network assets stubbed **by key** in tests | the real DAG is tested offline — stubs plug into the same dependency slots |
+| Content-addressed raw layer | retries are safe (idempotent), reruns are byte-identical (proven by test) |
+| Contract at raw → silver with a **named** error | violations fail loud and leave the previous silver untouched — never silent drops |
+| Silver has no timestamps | silver is a deterministic function of raw → byte-identical rebuild without clock injection |
+| SHA-pinned reference data | the ISO CSV is checksum-verified before load; tampered or stale files are refused |
+| Serial executor (max_concurrent=1) | DuckDB is single-writer — parallel step workers fought over the file lock in production; serial execution is correct and the warehouse is tiny, so latency is free |
+| Absent measurement ≠ contract violation | 35k real rows taught this: 2,841 null values and 660 no-ISO entities are policy drops with loud counts — the contract checks structure, silver applies policy |
+| `RetryPolicy` ×3 exponential on the fetch asset | transient API failures heal themselves; the landing layer makes retries free |
+| Daily partitions on gold_backfill | backfills become first-class: re-run any window without touching the rest |
+| Curated entity facts stay in `config.yaml` | thresholds and contracts are data, not code |
+
+## Resume line
+
+> Built an orchestration-layer pipeline (Python + Dagster + DuckDB): a
+> dependency-ordered asset graph over the World Bank API with retries, a daily
+> schedule, a filesystem sensor and daily-partitioned backfills; typed
+> raw→silver→gold layers with a named-error data contract;40 hermetic tests
+> (fixtures, zero network), one `./verify.sh` gate, GitHub Actions on every push.
+
+## Roadmap
+
+- Publish a live demo once the repo is on GitHub (CI badge turns green on first push)
+- `dagster dev` screenshots in this README
+- Wire the sensor's RunRequests to land incoming files (currently trigger-only)
+- dbt on top of the gold layer (port project #3's pattern)

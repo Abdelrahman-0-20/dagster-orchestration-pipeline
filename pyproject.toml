@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dagster-orchestration-pipeline"
+version = "0.1.0"
+description = "World Bank indicators -> Dagster asset graph -> DuckDB (portfolio project #4)"
+requires-python = ">=3.11"
+
+# Editable install so "import src" resolves everywhere — pytest, the dagster
+# CLI, and dagster's multiprocess step workers (which do not inherit the
+# repo-root sys.path bootstrap).
+[tool.setuptools]
+packages = ["src", "dagster_pipeline"]

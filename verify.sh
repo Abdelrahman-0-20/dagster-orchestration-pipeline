@@ -10,4 +10,5 @@ fi
 
 "$PY" -m pytest -q
 "$PY" -c "import yaml; yaml.safe_load(open('config.yaml'))"
+"$PY" -c "import yaml; yaml.safe_load(open('.github/workflows/ci.yml'))"
 "$PY" -m compileall -q src dagster_pipeline

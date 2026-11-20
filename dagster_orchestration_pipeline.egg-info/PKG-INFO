@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: dagster-orchestration-pipeline
+Version: 0.1.0
+Summary: World Bank indicators -> Dagster asset graph -> DuckDB (portfolio project #4)
+Requires-Python: >=3.11

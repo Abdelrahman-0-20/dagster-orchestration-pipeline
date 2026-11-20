@@ -3,7 +3,7 @@ sources:
   world_bank:
     base_url: "https://api.worldbank.org/v2"
     format: json
-    per_page: 100
+    per_page: 3000   # ~6 pages per indicator instead of ~176 (server honors up to 3000)
     # No API key — World Bank v2 is open.
     indicators:
       - id: NY.GDP.MKTP.CD
@@ -22,12 +22,14 @@ sources:
 # boundary (charter req 5). Violations fail loud with named errors.
 contracts:
   world_bank:
+    # Structure only: these must exist and be non-null. value == null means
+    # "no observation" upstream and countryiso3code == "" means the entity has
+    # no ISO code — both are silver POLICY (counted, then dropped), not
+    # violations. Wrong TYPES still fail loud (see src/contracts.py).
     required_fields:
       - indicator
       - country
-      - countryiso3code
       - date
-      - value
   iso3166:
     required_fields:
       - name
