@@ -1,6 +1,7 @@
 # dagster-orchestration-pipeline
 
 [![verify](https://github.com/Abdelrahman-0-20/dagster-orchestration-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/Abdelrahman-0-20/dagster-orchestration-pipeline/actions/workflows/ci.yml)
+[![Live demo](https://img.shields.io/badge/live%20demo-streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://dagster-orchestration-pipeline-octdjvn9cqwhx5yjkqhy2c.streamlit.app/)
 
 Project #4 of a [data engineering portfolio](https://github.com/Abdelrahman-0-20/api-ingestion-pipeline)
 (companions: [API ingestion](https://github.com/Abdelrahman-0-20/api-ingestion-pipeline) ·
@@ -78,9 +79,10 @@ Its data is **CSV-first**: the warehouse is a gitignored build artifact, so CI
 runs the production job, exports `dashboard/data/*.csv` (deterministic
 ORDER BYs — no churn commits) and commits them back with `[skip ci]`. Locally
 the app prefers the live warehouse and falls back to the CSVs; on Streamlit
-Cloud the CSVs are all it needs (that path is tested). Deploy by connecting
-the repo on [share.streamlit.io](https://share.streamlit.io) — CI keeps the
-data fresh forever.
+Cloud the CSVs are all it needs (that path is tested).
+
+**Live demo:** [dagster-orchestration-pipeline-octdjvn9cqwhx5yjkqhy2c.streamlit.app](https://dagster-orchestration-pipeline-octdjvn9cqwhx5yjkqhy2c.streamlit.app/) — deployed on Streamlit
+Community Cloud; CI keeps its data fresh forever.
 
 ## Testing philosophy: fixtures, not the network
 
@@ -116,7 +118,6 @@ ordering) is exercised without a single HTTP call.
 
 ## Roadmap
 
-- Deploy the dashboard on Streamlit Cloud and add the live-demo badge here
 - `dagster dev` screenshots in this README
 - Wire the sensor's RunRequests to land incoming files (currently trigger-only)
 - dbt on top of the gold layer (port project #3's pattern)
